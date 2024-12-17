@@ -1,0 +1,74 @@
+/* BlogList.css */
+
+/* Global Styling for BlogList */
+.blog-list {
+    padding: 2em 1em;
+  }
+  
+  .blog-list .post {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+  }
+  
+  .blog-list .post-title {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 0.2em;
+  }
+  
+  .blog-list .post-description {
+    font-family: Georgia, "Cambria", serif;
+    color: #444;
+    line-height: 1.8em;
+  }
+  
+  .blog-list .post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+  }
+  
+  .blog-list .post-author {
+    color: rgb(61, 146, 201);
+  }
+  
+  /* Make the image responsive */
+  .blog-list .pure-img-responsive {
+    max-width: 100%;  /* Ensures image does not exceed container width */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 48em) {
+    .blog-list .post-title {
+      font-size: 1.5em;
+    }
+  
+    .blog-list .post-description {
+      font-size: 1rem;
+    }
+  
+    .blog-list .pure-img-responsive {
+      width: 100%;  /* Ensure image takes full width on mobile */
+      height: auto;  /* Maintain aspect ratio */
+    }
+  }
+  
+  /* For tablets and larger screens */
+  @media (min-width: 48em) and (max-width: 72em) {
+    .blog-list .pure-img-responsive {
+      width: 100%; /* Ensure image is responsive on tablets */
+      height: auto;
+    }
+  }
+  
+  /* For larger desktops */
+  @media (min-width: 72em) {
+    .blog-list .pure-img-responsive {
+      width: 100%; /* Ensure image is responsive on large desktops */
+      height: auto;
+    }
+  }
+  

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { createClient } from 'contentful';
 import { Link } from 'react-router-dom';
-
+import '../css/BlogList.css'
 const BlogList = () => {
   const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);

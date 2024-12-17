@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
 }
 
 .navbar-logo img {
@@ -40,6 +41,20 @@
   color: #ff7f50;
 }
 
+/* Hamburger Menu for Mobile */
+.hamburger {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+}
+
 /* For mobile responsiveness */
 @media (max-width: 768px) {
   .navbar-container {
@@ -50,9 +65,21 @@
   .navbar-menu {
     flex-direction: column;
     width: 100%;
+    display: none; /* Hide menu by default */
+    margin-top: 10px;
   }
 
   .navbar-item {
     margin: 10px 0;
+    text-align: left; /* Align links to the left in mobile view */
+  }
+
+  .navbar-menu.active {
+    display: flex; /* Show menu when active */
+  }
+
+  /* Show hamburger menu */
+  .hamburger {
+    display: flex;
   }
 }

@@ -1,121 +1,195 @@
 /* Contact Form Styling */
 .contact-form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #fff; /* Clean white background */
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif; /* More professional font */
-    color: #444; /* Darker text color for better readability */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff; /* Clean white background */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif; /* More professional font */
+  color: #444; /* Darker text color for better readability */
+}
+
+.contact-form-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333; /* Darker color for the header */
+  font-weight: 600; /* Slightly bolder for emphasis */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adding space between form elements */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555; /* Slightly lighter color for labels */
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #f8f8f8; /* Light background for form inputs */
+  color: #333; /* Dark text for better readability */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 86, 179, 0.2); /* Subtle focus effect */
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px; /* Ensure textarea is large enough */
+}
+
+.submit-button {
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #0056b3; /* Deep blue for a mature look */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #004085; /* Darker shade of blue on hover */
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.submit-button:active {
+  transform: translateY(0); /* Reset the lift effect when clicked */
+}
+
+.form-status {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.form-status.success {
+  color: #28a745; /* Green for success */
+}
+
+.form-status.error {
+  color: #dc3545; /* Red for error */
+}
+
+/* Responsive Styles */
+
+/* For large desktops and tablets */
+@media (max-width: 1200px) {
+  .contact-form-container {
+      padding: 35px;
   }
-  
+
   .contact-form-container h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333; /* Darker color for the header */
-    font-weight: 600; /* Slightly bolder for emphasis */
+      font-size: 2.2rem;
   }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Adding space between form elements */
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
+
   .form-group label {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #555; /* Slightly lighter color for labels */
-    margin-bottom: 10px;
+      font-size: 1.1rem;
   }
-  
+
   .form-group input,
   .form-group textarea {
-    width: 100%;
-    padding: 12px 16px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-    background-color: #f8f8f8; /* Light background for form inputs */
-    color: #333; /* Dark text for better readability */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      font-size: 1rem;
   }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: #0056b3;
-    box-shadow: 0 0 8px rgba(0, 86, 179, 0.2); /* Subtle focus effect */
-  }
-  
-  .form-group textarea {
-    resize: vertical;
-    min-height: 120px; /* Ensure textarea is large enough */
-  }
-  
+
   .submit-button {
-    padding: 14px 24px;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: #0056b3; /* Deep blue for a mature look */
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+      font-size: 1.1rem;
   }
-  
-  .submit-button:hover {
-    background-color: #004085; /* Darker shade of blue on hover */
-    transform: translateY(-2px); /* Subtle lift on hover */
-  }
-  
-  .submit-button:active {
-    transform: translateY(0); /* Reset the lift effect when clicked */
-  }
-  
-  .form-status {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-  
-  .form-status.success {
-    color: #28a745; /* Green for success */
-  }
-  
-  .form-status.error {
-    color: #dc3545; /* Red for error */
-  }
-  
-  @media (max-width: 768px) {
-    .contact-form-container {
+}
+
+/* For tablets and smaller devices */
+@media (max-width: 992px) {
+  .contact-form-container {
       padding: 30px;
-    }
-  
-    .contact-form-container h2 {
-      font-size: 2rem;
-    }
-  
-    .form-group label {
-      font-size: 1rem;
-    }
-  
-    .form-group input,
-    .form-group textarea {
-      font-size: 0.95rem;
-    }
-  
-    .submit-button {
-      font-size: 1rem;
-    }
   }
-  
+
+  .contact-form-container h2 {
+      font-size: 2rem;
+  }
+
+  .form-group label {
+      font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+      font-size: 0.95rem;
+  }
+
+  .submit-button {
+      font-size: 1rem;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .contact-form-container {
+      padding: 20px;
+  }
+
+  .contact-form-container h2 {
+      font-size: 1.75rem;
+  }
+
+  .form-group label {
+      font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+      font-size: 0.95rem;
+  }
+
+  .submit-button {
+      font-size: 0.95rem;
+  }
+}
+
+/* For very small screens (extra mobile size) */
+@media (max-width: 480px) {
+  .contact-form-container {
+      padding: 15px;
+  }
+
+  .contact-form-container h2 {
+      font-size: 1.5rem;
+  }
+
+  .form-group label {
+      font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+      font-size: 0.9rem;
+  }
+
+  .submit-button {
+      font-size: 0.9rem;
+  }
+}
